@@ -1,0 +1,105 @@
+* {
+    position: relative;
+    font-family: Tahoma, "Segoe UI", Verdana, sans-serif;
+    color: #333;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #cdcdcd;
+    width: 600px;
+    min-height: 200px;
+    top: 50%;
+    left: center;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 20px;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+}
+
+.close:hover,
+.close:focus {
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    color: white;
+    height: 50px;
+}
+
+.modal-body {
+    padding: 2px 16px;
+    text-align: center;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    color: white;
+    text-align: right;
+    height: 50px;
+}
+
+input {
+    border: 1px solid #cdcdcd;
+    right: 5px;
+    border-radius: 3px;
+}
+
+input.submit-btn {
+    background-color: #bada55;
+    color: darkgreen;
+    border: none;
+}
+
+input[type="reset"] {
+    background-color: #333;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+}
+
+.form-input {
+    text-align: left;
+}
+
+.form-label {
+    text-align: right;
+}
+
+::placeholder {
+    color: #929292;
+}
