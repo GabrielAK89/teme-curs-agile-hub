@@ -4,136 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Holy grail Layout</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="cat" class="svg-inline--fa fa-cat fa-w-16"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M290.59 192c-20.18 0-106.82 1.98-162.59 85.95V192c0-52.94-43.06-96-96-96-17.67 0-32 14.33-32 32s14.33 32 32 32c17.64 0 32 14.36 32 32v256c0 35.3 28.7 64 64 64h176c8.84 0 16-7.16 16-16v-16c0-17.67-14.33-32-32-32h-32l128-96v144c0 8.84 7.16 16 16 16h32c8.84 0 16-7.16 16-16V289.86c-10.29 2.67-20.89 4.54-32 4.54-61.81 0-113.52-44.05-125.41-102.4zM448 96h-64l-64-64v134.4c0 53.02 42.98 96 96 96s96-42.98 96-96V32l-64 64zm-72 80c-8.84 0-16-7.16-16-16s7.16-16 16-16 16 7.16 16 16-7.16 16-16 16zm80 0c-8.84 0-16-7.16-16-16s7.16-16 16-16 16 7.16 16 16-7.16 16-16 16z">
+                        </path>
+                    </svg>
+                    <span>Cat</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dog" class="svg-inline--fa fa-dog fa-w-18"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z">
+                        </path>
+                    </svg>
+                    <span>Dog</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spider" class="svg-inline--fa fa-spider fa-w-18"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M151.17 167.35L177.1 176h4.67l5.22-26.12c.72-3.58 1.8-7.58 3.21-11.79l-20.29-40.58 23.8-71.39c2.79-8.38-1.73-17.44-10.12-20.24L168.42.82c-8.38-2.8-17.45 1.73-20.24 10.12l-25.89 77.68a32.04 32.04 0 0 0 1.73 24.43l27.15 54.3zm422.14 182.03l-52.75-79.12a32.002 32.002 0 0 0-26.62-14.25H416l68.99-24.36a32.03 32.03 0 0 0 16.51-12.61l53.6-80.41c4.9-7.35 2.91-17.29-4.44-22.19l-13.31-8.88c-7.35-4.9-17.29-2.91-22.19 4.44l-50.56 75.83L404.1 208H368l-10.37-51.85C355.44 145.18 340.26 96 288 96c-52.26 0-67.44 49.18-69.63 60.15L208 208h-36.1l-60.49-20.17L60.84 112c-4.9-7.35-14.83-9.34-22.19-4.44l-13.31 8.88c-7.35 4.9-9.34 14.83-4.44 22.19l53.6 80.41a32.03 32.03 0 0 0 16.51 12.61L160 256H82.06a32.02 32.02 0 0 0-26.63 14.25L2.69 349.38c-4.9 7.35-2.92 17.29 4.44 22.19l13.31 8.88c7.35 4.9 17.29 2.91 22.19-4.44l48-72h47.06l-60.83 97.33A31.988 31.988 0 0 0 72 418.3V496c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-73.11l74.08-118.53c-1.01 14.05-2.08 28.11-2.08 42.21C192 399.64 232.76 448 288 448s96-48.36 96-101.43c0-14.1-1.08-28.16-2.08-42.21L456 422.89V496c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-77.71c0-6-1.69-11.88-4.86-16.96L438.31 304h47.06l48 72c4.9 7.35 14.84 9.34 22.19 4.44l13.31-8.88c7.36-4.9 9.34-14.83 4.44-22.18zM406.09 97.51l-20.29 40.58c1.41 4.21 2.49 8.21 3.21 11.79l5.22 26.12h4.67l25.93-8.65 27.15-54.3a31.995 31.995 0 0 0 1.73-24.43l-25.89-77.68C425.03 2.56 415.96-1.98 407.58.82l-15.17 5.06c-8.38 2.8-12.91 11.86-10.12 20.24l23.8 71.39z">
+                        </path>
+                    </svg>
+                    <span>Spider</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="dog" class="svg-inline--fa fa-dog fa-w-18"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M298.06,224,448,277.55V496a16,16,0,0,1-16,16H368a16,16,0,0,1-16-16V384H192V496a16,16,0,0,1-16,16H112a16,16,0,0,1-16-16V282.09C58.84,268.84,32,233.66,32,192a32,32,0,0,1,64,0,32.06,32.06,0,0,0,32,32ZM544,112v32a64,64,0,0,1-64,64H448v35.58L320,197.87V48c0-14.25,17.22-21.39,27.31-11.31L374.59,64h53.63c10.91,0,23.75,7.92,28.62,17.69L464,96h64A16,16,0,0,1,544,112Zm-112,0a16,16,0,1,0-16,16A16,16,0,0,0,432,112Z">
+                        </path>
+                    </svg>
+                    <span>Dog</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spider" class="svg-inline--fa fa-spider fa-w-18"
+                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                        <path fill="currentColor"
+                            d="M151.17 167.35L177.1 176h4.67l5.22-26.12c.72-3.58 1.8-7.58 3.21-11.79l-20.29-40.58 23.8-71.39c2.79-8.38-1.73-17.44-10.12-20.24L168.42.82c-8.38-2.8-17.45 1.73-20.24 10.12l-25.89 77.68a32.04 32.04 0 0 0 1.73 24.43l27.15 54.3zm422.14 182.03l-52.75-79.12a32.002 32.002 0 0 0-26.62-14.25H416l68.99-24.36a32.03 32.03 0 0 0 16.51-12.61l53.6-80.41c4.9-7.35 2.91-17.29-4.44-22.19l-13.31-8.88c-7.35-4.9-17.29-2.91-22.19 4.44l-50.56 75.83L404.1 208H368l-10.37-51.85C355.44 145.18 340.26 96 288 96c-52.26 0-67.44 49.18-69.63 60.15L208 208h-36.1l-60.49-20.17L60.84 112c-4.9-7.35-14.83-9.34-22.19-4.44l-13.31 8.88c-7.35 4.9-9.34 14.83-4.44 22.19l53.6 80.41a32.03 32.03 0 0 0 16.51 12.61L160 256H82.06a32.02 32.02 0 0 0-26.63 14.25L2.69 349.38c-4.9 7.35-2.92 17.29 4.44 22.19l13.31 8.88c7.35 4.9 17.29 2.91 22.19-4.44l48-72h47.06l-60.83 97.33A31.988 31.988 0 0 0 72 418.3V496c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-73.11l74.08-118.53c-1.01 14.05-2.08 28.11-2.08 42.21C192 399.64 232.76 448 288 448s96-48.36 96-101.43c0-14.1-1.08-28.16-2.08-42.21L456 422.89V496c0 8.84 7.16 16 16 16h16c8.84 0 16-7.16 16-16v-77.71c0-6-1.69-11.88-4.86-16.96L438.31 304h47.06l48 72c4.9 7.35 14.84 9.34 22.19 4.44l13.31-8.88c7.36-4.9 9.34-14.83 4.44-22.18zM406.09 97.51l-20.29 40.58c1.41 4.21 2.49 8.21 3.21 11.79l5.22 26.12h4.67l25.93-8.65 27.15-54.3a31.995 31.995 0 0 0 1.73-24.43l-25.89-77.68C425.03 2.56 415.96-1.98 407.58.82l-15.17 5.06c-8.38 2.8-12.91 11.86-10.12 20.24l23.8 71.39z">
+                        </path>
+                    </svg>
+                    <span>Spider</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal" data-backdrop="static" data-keyboard="false">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Login</h2>
-            </div>
-            <hr>
-            <form action="#" method="get">
-                <div class="modal-body">
-                    <table>
-                        <tr>
-                            <td class="form-label"><label for="username">Username</label></td>
-                            <td class="form-input"><input type="text" name="username" id="username"
-                                    placeholder="Username"></td>
-                        </tr>
-                        <tr>
-                            <td class="form-label"><label for="password">Password</label></td>
-                            <td class="form-input"><input type="password" name="password" id="password"
-                                    placeholder="Password"></td>
-                        </tr>
-                    </table>
-                </div>
-                <hr>
-                <div class="modal-footer">
-                    <input type="reset" value="Cancel">
-                    <input type="submit" value="Login" class="submit-btn">
-                </div>
-            </form>
-        </div>
-
-    </div>
-    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod ab veritatis porro, non minus corrupti, ad,
-        eius rerum aliquid soluta rem nulla corporis sed voluptas modi optio? A, veniam impedit!
-        Laudantium incidunt eos necessitatibus cumque ipsum, quis explicabo corporis impedit id veniam ad nobis
-        quasi laborum temporibus sequi officiis nemo! Vel modi pariatur assumenda earum ullam sit alias similique
-        voluptates.
-        Perferendis dolore deleniti animi cupiditate, modi iste sit cum tenetur ullam voluptates aliquam at
-        molestias minima quibusdam minus cumque aliquid perspiciatis pariatur eius doloremque! Quis dolore doloribus
-        adipisci nostrum voluptatibus?
-        Dicta dolore doloremque exercitationem in facere fuga autem eum aliquid. Ullam mollitia neque quis fuga
-        velit dolores eligendi vel accusantium! Consequatur beatae quas rerum optio ad! Architecto reprehenderit
-        alias debitis!
-        Aperiam pariatur corporis assumenda aliquam? Quos minima numquam iste sed quis facilis maiores quae aperiam
-        quisquam officiis. Repudiandae, ducimus necessitatibus maiores unde iure adipisci ipsam, quae sunt voluptate
-        excepturi nisi?
-        Consequuntur sint rerum distinctio voluptates omnis optio perspiciatis, voluptate blanditiis corrupti
-        veritatis consectetur, delectus ad ea. Assumenda ut dolor perferendis nemo, hic sequi ad ea aliquid
-        molestias dicta! Aliquid, maxime!
-        Aut nemo quam saepe velit suscipit doloribus vero nihil id exercitationem, explicabo voluptatibus asperiores
-        ex, omnis dolore enim vitae architecto incidunt adipisci distinctio dolores delectus temporibus itaque
-        perspiciatis! Asperiores, error.
-        Possimus, dolores sequi quas quam libero animi saepe, nam eveniet consequuntur aut tempore! Sapiente quo
-        optio assumenda temporibus iure aperiam quod expedita animi, asperiores excepturi quae aliquid in dolorem
-        sequi!
-        Maiores odit eum quaerat assumenda voluptate ut vel non dolor, consequatur amet veritatis, quas alias, eos
-        possimus cupiditate? Veritatis rem odio cumque dignissimos repellat alias beatae debitis soluta odit quo.
-        Veritatis odio quo aliquam iure nobis deleniti at quam mollitia quisquam eius, vero nam non accusamus
-        sapiente expedita minus nemo? Adipisci reprehenderit corporis pariatur sapiente hic dignissimos quasi sint
-        cupiditate.
-        Maiores odit eum quaerat assumenda voluptate ut vel non dolor, consequatur amet veritatis, quas alias, eos
-        possimus
-        cupiditate? Veritatis rem odio cumque dignissimos repellat alias beatae debitis soluta odit quo.
-        Veritatis odio quo aliquam iure nobis deleniti at quam mollitia quisquam eius, vero nam non accusamus
-        sapiente expedita
-        minus nemo? Adipisci reprehenderit corporis pariatur sapiente hic dignissimos quasi sint cupiditate.Maiores odit
-        eum quaerat assumenda voluptate ut vel non dolor, consequatur amet veritatis, quas alias, eos possimus
-        cupiditate? Veritatis rem odio cumque dignissimos repellat alias beatae debitis soluta odit quo.
-        Veritatis odio quo aliquam iure nobis deleniti at quam mollitia quisquam eius, vero nam non accusamus sapiente
-        expedita
-        minus nemo? Adipisci reprehenderit corporis pariatur sapiente hic dignissimos quasi sint cupiditate.Maiores odit
-        eum quaerat assumenda voluptate ut vel non dolor, consequatur amet veritatis, quas alias, eos possimus
-        cupiditate? Veritatis rem odio cumque dignissimos repellat alias beatae debitis soluta odit quo.
-        Veritatis odio quo aliquam iure nobis deleniti at quam mollitia quisquam eius, vero nam non accusamus sapiente
-        expedita
-        minus nemo? Adipisci reprehenderit corporis pariatur sapiente hic dignissimos quasi sint cupiditate.
-        Maiores odit eum quaerat assumenda voluptate ut vel non dolor, consequatur amet veritatis, quas alias, eos
-        possimus
-        cupiditate? Veritatis rem odio cumque dignissimos repellat alias beatae debitis soluta odit quo.
-        Veritatis odio quo aliquam iure nobis deleniti at quam mollitia quisquam eius, vero nam non accusamus
-        sapiente expedita
-        minus nemo? Adipisci reprehenderit corporis pariatur sapiente hic dignissimos quasi sint cupiditate.Maiores odit
-        eum quaerat assumenda voluptate ut vel non dolor, consequatur amet veritatis, quas alias, eos possimus
-        cupiditate? Veritatis rem odio cumque dignissimos repellat alias beatae debitis soluta odit quo.
-        Veritatis odio quo aliquam iure nobis deleniti at quam mollitia quisquam eius, vero nam non accusamus sapiente
-        expedita
-        minus nemo? Adipisci reprehenderit corporis pariatur sapiente hic dignissimos quasi sint cupiditate.Maiores odit
-        eum quaerat assumenda voluptate ut vel non dolor, consequatur amet veritatis, quas alias, eos possimus
-        cupiditate? Veritatis rem odio cumque dignissimos repellat alias beatae debitis soluta odit quo.
-        Veritatis odio quo aliquam iure nobis deleniti at quam mollitia quisquam eius, vero nam non accusamus sapiente
-        expedita
-        minus nemo? Adipisci reprehenderit corporis pariatur sapiente hic dignissimos quasi sint cupiditate.</div>
-    <script>
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
-
+    <main>
+        <h1>Flex is COOL</h1>
+        <p>
+            <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, accusantium dolor eius quam est
+                mollitia maiores earum magnam beatae, rerum facilis pariatur ad porro, vel fuga autem unde id
+                nemo.</span>
+            <span>Adipisci vitae rerum atque temporibus fugit est explicabo laboriosam ipsam quae eos suscipit ducimus
+                impedit aliquam, quos esse vel neque soluta voluptates. Ipsa fugit error doloribus molestias vitae earum
+                eum?</span>
+            <span>Odit expedita excepturi at? Id nesciunt cum voluptatibus. Nobis eum ducimus eos voluptates, dolorem
+                magni quam mollitia vitae rem cumque, veritatis illo, tenetur repellendus itaque. Debitis dolore fugiat
+                eveniet placeat.</span>
+            <span>Animi, exercitationem maxime! Sapiente, vero. Perferendis at nobis consequatur. Saepe, quae nostrum?
+                In odit nihil corporis mollitia error eveniet omnis voluptas, consequatur animi nulla molestiae?
+                Accusamus labore temporibus nostrum nemo.</span>
+            <span>Ad nemo ratione vero eius assumenda quidem voluptate voluptatem illum ea tempore. Nisi natus, dolor
+                reiciendis aspernatur mollitia quidem asperiores, autem aliquid optio commodi ipsam aut debitis, eaque
+                dicta ad!</span>
+        </p>
+        <p>
+            <span>Voluptates consectetur earum tempora delectus reiciendis deleniti fugiat nulla facere illo, neque
+                saepe? Iusto earum maxime accusantium eligendi, perferendis deserunt minima veritatis cumque porro,
+                alias quis nisi hic distinctio eum.</span>
+            <span>Eligendi, soluta similique quam iure tenetur ut voluptatum omnis quod nobis quos voluptates voluptatem
+                sed dolorum. Cum ipsum eaque saepe perspiciatis quidem minus cupiditate est libero, laboriosam
+                recusandae ut nihil?</span>
+            <span>Maxime repellendus nemo amet sequi aliquid ullam repudiandae, magnam id aliquam odio laudantium velit
+                vel laborum modi cum accusantium explicabo alias earum labore unde deleniti inventore? Possimus
+                reprehenderit molestiae atque!</span>
+            <span>Officia officiis totam ipsum fugit qui. Eos magnam quam dolor omnis animi vel, explicabo ratione
+                beatae, recusandae, sed natus officiis a at sequi corrupti blanditiis. Neque quae deserunt velit
+                esse.</span>
+            <span>Fugit amet neque ullam unde harum. Sapiente in quia incidunt praesentium repudiandae odio maiores
+                reprehenderit libero rerum! Aspernatur debitis iure temporibus. Illo veritatis quod explicabo facilis
+                laboriosam earum porro eum.</span>
+        </p>
+        <p>
+            <span>Ad ex beatae pariatur maxime eos itaque iusto fugiat totam. Repudiandae, similique. Officia, dolorem
+                unde distinctio, cupiditate facilis, ipsum ea similique modi voluptate cum maiores fugiat aliquid error
+                sunt quia?</span>
+            <span>Cupiditate sit nesciunt doloribus fugit dolorum, obcaecati necessitatibus nostrum nam deserunt
+                accusamus ratione consequatur sapiente pariatur consequuntur animi, a esse tenetur eaque. Nesciunt
+                officiis accusantium optio perspiciatis! Aut, quae atque?</span>
+            <span>Eius ea corporis velit commodi! Optio, dolorum officiis. Aperiam, nesciunt aspernatur numquam quasi
+                placeat culpa dolor necessitatibus laboriosam exercitationem illo non quo doloribus optio minima
+                perferendis vel quibusdam ipsa nobis!</span>
+            <span>Commodi tempore ratione eos molestias, corrupti ipsa sapiente officia deserunt nemo numquam neque
+                unde. Quibusdam delectus tenetur culpa iure rerum sapiente mollitia, expedita dicta at, a dolorem
+                laudantium voluptatibus autem?</span>
+            <span>Quo laudantium maxime delectus dolore non facere eius tempora, optio dignissimos molestiae quod
+                doloremque ducimus doloribus laborum pariatur, sed minus adipisci commodi! Aliquid deserunt molestias
+                dicta facilis porro, dolorem placeat.</span>
+        </p>
+    </main>
 </body>
 
 </html>

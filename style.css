@@ -1,105 +1,68 @@
+:root {
+    --nav-width: 5rem;
+    --bg-color-primary: rgb(30, 30, 30);
+    --bg-color-secondary: rgb(150, 150, 150);
+}
+
 * {
-    position: relative;
-    font-family: Tahoma, "Segoe UI", Verdana, sans-serif;
-    color: #333;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
+    margin: 0;
     padding: 0;
-    border: 1px solid #cdcdcd;
-    width: 600px;
-    min-height: 200px;
-    top: 50%;
-    left: center;
-    transform: translateY(-50%);
-    border-radius: 5px;
+
+    box-sizing: border-box;
 }
 
-/* The Close Button */
-.close {
-    color: #000;
-    float: right;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border-radius: 20px;
-    height: 20px;
-    width: 20px;
-    text-align: center;
+main {
+    margin-left: var(--nav-width);
+    padding-left: 1rem;
+
+    line-height: 1.5;
 }
 
-.close:hover,
-.close:focus {
-    cursor: pointer;
+nav {
+    position: fixed;
+
+    width: var(--nav-width);
+    height: 100vh;
+
+    background-color: var(--bg-color-primary);
 }
 
-.modal-header {
-    padding: 2px 16px;
-    color: white;
-    height: 50px;
+p {
+    margin-bottom: 1rem;
 }
 
-.modal-body {
-    padding: 2px 16px;
-    text-align: center;
+.nav-link {
+    text-decoration: none;
+    color: var(--bg-color-secondary);
+
+    display: flex;
+    align-items: center;
+
+    height: 5rem;
 }
 
-.modal-footer {
-    padding: 2px 16px;
-    color: white;
-    text-align: right;
-    height: 50px;
+.nav-link > svg {
+    height: 2rem;
 }
 
-input {
-    border: 1px solid #cdcdcd;
-    right: 5px;
-    border-radius: 3px;
+.nav-link span {
+    margin-left: 2rem;
+
+    display: none;
 }
 
-input.submit-btn {
-    background-color: #bada55;
-    color: darkgreen;
-    border: none;
+.navbar:hover .nav-link span {
+    display: inline;
 }
 
-input[type="reset"] {
-    background-color: #333;
-    color: #fff;
+.navbar:hover {
+    width: 8rem;
 }
 
-table {
-    width: 100%;
+.nav-link:hover svg {
+    color: green;
 }
 
-td {
-    padding: 5px;
-}
-
-.form-input {
-    text-align: left;
-}
-
-.form-label {
-    text-align: right;
-}
-
-::placeholder {
-    color: #929292;
+.nav-link:hover {
+    box-shadow: 0px 1px green;
 }
