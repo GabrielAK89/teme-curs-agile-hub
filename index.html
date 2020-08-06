@@ -1,104 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planets</title>
+    <title>eShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fonts/glyphicons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    <div>
-        <table border="1">
-            <thead>
-                <tr>
-                    <td colspan="2"></td>
-                    <th scope="col">Name</th>
-                    <th scope="col">Mass (10<sup>24</sup>KG)</th>
-                    <th scope="col">Diameter (km)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th rowspan="4" colspan="2">Terrestrial planets</th>
-                    <th>Mercury</th>
-                    <td>0.330</td>
-                    <td>4.879</td>
-                </tr>
-                <tr>
-                    <th>Venus</th>
-                    <td>4.87</td>
-                    <td>12.104</td>
-                </tr>
-                <tr>
-                    <th>Earth</th>
-                    <td>5.97</td>
-                    <td>12.756</td>
-                </tr>
-                <tr>
-                    <th>Mars</th>
-                    <td>0.642</td>
-                    <td>6.792</td>
-                </tr>
-                <tr>
-                    <th rowspan="4">Jovian planets</th>
-                    <th rowspan="2">Gas giants</th>
-                    <th>Jupiter</th>
-                    <td>1898</td>
-                    <td>142.984</td>
-                </tr>
-                <tr>
-                    <th>Saturn</th>
-                    <td>568</td>
-                    <td>120.536</td>
-                </tr>
-                <tr>
-                    <th rowspan="2">Gas giants</th>
-                    <th>Uranus</th>
-                    <td>86.8</td>
-                    <td>51.118</td>
-                </tr>
-                <tr>
-                    <th>Neptune</th>
-                    <td>102</td>
-                    <td>49.528</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Dwarf planets</th>
-                    <th>Pluto</th>
-                    <td>0.0146</td>
-                    <td>2.370</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    
-        <form action="" method="GET">
-            <fieldset>
-                <legend>Ask us about planets</legend>
-                <p>
-                    <label for="fname">Full name:</label>
-                    <input type="text" name="fname" id="fname">
-                </p>
-                <p>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
-                </p>
-                <p>
-                    <p>Favorite planet:</p>
-                    <div><input type="radio" name="planet" id="Mercury" value="mercury"><label for="Mercury">Mercury</label></div>
-                    <div><input type="radio" name="planet" id="Venus" value="venus"><label for="Venus">Venus</label></div>
-                    <div><input type="radio" name="planet" id="Earth" checked value="earth"><label for="Earth">Earth</label></div>
-                    <div><input type="radio" name="planet" id="Mars" value="mars"><label for="Mars">Mars</label></div>
-                    <div><input type="radio" name="planet" id="Jupiter" value="jupiter"><label for="Jupiter">Jupiter</label></div>
-                    <div><input type="radio" name="planet" id="Saturn" value="saturn"><label for="Saturn">Saturn</label>  </div>
-                    <div><input type="radio" name="planet" id="Uranus" value="uranus"><label for="Uranus">Uranus</label></div>
-                    <div><input type="radio" name="planet" id="Neptune" value="neptune"><label for="Neptune">Neptune</label></div>
-                    <div><input type="radio" name="planet" id="Pluto" value="pluto"><label for="Pluto">Pluto</label></div>
-                </p>
-                <p><input type="checkbox" name="terms" id="terms"><label for="terms">I agree to the <a href="">terms and conditions</a></label></p>
-                <p><input type="reset">
-                <input type="Submit" value="Ask away"></p>
-            </form>
-            </fieldset>
 
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-container__item"><span class="glyphicon glyphicon-time" aria-hidden="true"></span> Free
+                and Fast Delivery</div>
+            <div class="header-container__item"><span class="glyphicon glyphicon-shopping-cart"
+                    aria-hidden="true"></span> Free shipping on all orders</div>
+            <div class="header-container__item"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a
+                    href="mailto:info@example.com"> info@example.com</a></div>
+        </div>
+        <div class="header-search-container">
+            <img src="./images/logo3.jpg" alt="Smart Shop logo" class="logo">
+            <div class="header-search">
+                <input class="header-search__text" type="text" name="search" placeholder="Search">
+                <select class="header-search__select">
+                    <option class="header-search__option" value="All categories">All categories</option>
+                    <option class="header-search__option" value="Clothing">Clothing</option>
+                    <option class="header-search__option" value="Wallets">Wallets</option>
+                    <option class="header-search__option" value="Footwear">Footwear</option>
+                    <option class="header-search__option" value="Watches">Watches</option>
+                    <option class="header-search__option" value="Accesories">Accesories</option>
+                    <option class="header-search__option" value="Bags">Bags</option>
+                    <option class="header-search__option" value="Caps & Hats">Caps & Hats</option>
+                    <option class="header-search__option" value="Jewellery">Jewellery</option>
+                    <option class="header-search__option" value="Sunglasses">Sunglasses</option>
+                    <option class="header-search__option" value="Parfumes">Parfumes</option>
+                    <option class="header-search__option" value="Beauty">Beauty</option>
+                    <option class="header-search__option" value="Shirts">Shirts</option>
+                    <option class="header-search__option" value="Swimwear">Swimwear</option>
+                </select>
+                <button class="search-button" type="submit"><span class="glyphicon glyphicon-search"
+                        aria-hidden="true"></span></button>
+            </div>
+            <div class="img-social-container">
+                <img src="./images/img-sp.png" alt="social" class="img-social">
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <div class="icon-container">
+                <button href="javascript:void(0);" class="icon" onclick="navbutton()">&#9776;</button>
+            </div>
+            <a href="#" class="active uppercase"><span>Home</span></a>
+            <div class="dropdown">
+                <button class="dropbtn uppercase" onclick="function_dropdown()"><span>Men's wear</span>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <img class="dropdown-item" src="./images/woo1.jpg" alt="">
+                    <div class="dropdown-content-links">
+                        <a class="dropdown-item" href="#">Wallets</a>
+                        <a class="dropdown-item" href="#">Clothing</a>
+                        <a class="dropdown-item" href="#">Footwear</a>
+                        <a class="dropdown-item" href="#">Watches</a>
+                        <a class="dropdown-item" href="#">Accesories</a>
+                        <a class="dropdown-item" href="#">Bags</a>
+                        <a class="dropdown-item" href="#">Caps & Hats</a>
+                        <a class="dropdown-item" href="#">Jewellery</a>
+                        <a class="dropdown-item" href="#">Sunglasses</a>
+                        <a class="dropdown-item" href="#">Parfumes</a>
+                        <a class="dropdown-item" href="#">Beauty</a>
+                        <a class="dropdown-item" href="#">Shirts</a>
+                        <a class="dropdown-item" href="#">Swimwear</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn uppercase" onclick="function_dropdown()"><span>Women's wear</span>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content" id="myDropdown">
+                    <img class="dropdown-item" src="./images/woo.jpg" alt="">
+                    <a class="dropdown-item" href="#">Wallets</a>
+                    <a class="dropdown-item" href="#">Clothing</a>
+                    <a class="dropdown-item" href="#">Footwear</a>
+                    <a class="dropdown-item" href="#">Watches</a>
+                    <a class="dropdown-item" href="#">Accesories</a>
+                    <a class="dropdown-item" href="#">Bags</a>
+                    <a class="dropdown-item" href="#">Caps & Hats</a>
+                    <a class="dropdown-item" href="#">Jewellery</a>
+                    <a class="dropdown-item" href="#">Sunglasses</a>
+                    <a class="dropdown-item" href="#">Parfumes</a>
+                    <a class="dropdown-item" href="#">Beauty</a>
+                    <a class="dropdown-item" href="#">Shirts</a>
+                    <a class="dropdown-item" href="#">Swimwear</a>
+                </div>
+            </div>
+            <a class="uppercase" href="#"><span>electronics</span></a>
+            <a class="uppercase" href="#"><span>short codes</span></a>
+            <a class="uppercase" href="#"><span>Contact</span></a>
+            <div class="shopping-cart">
+                <button class="shopping-cart__button"><span class="glyphicon glyphicon-shopping-cart shopping-cart-icon"
+                        aria-hidden="true"></span><span>$0.00 (0 items) <br /> Empty Cart</span></button>
+            </div>
+        </div>
+        <div class="shop-products">
+            <img src="./images/baa2.jpg" alt="" class="hidden-shop-products__img1">
+            <img class="shop-products__img" src="./images/ba3.jpg" alt="shop-products">
+            <img src="./images/baa1.jpg" alt="" class="hidden-shop-products__img2">
+        </div>
+    </nav>
+
+    <main class="main-container">
+        <div class="main-container__title">
+            <h1 class="uppercase main-container__title__h1"><span>New</span> arrivals</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi laudantium dolores quisquam voluptatum,
+                possimus expedita.</p>
+        </div>
+
+        <div class="discount-categories">
+            <div id="wedding-collection" class="products-container">
+                <div class="product-container__text__black">
+                    <p class="products-container__text uppercase">wedding collection <br />flat 50% discount<br /><span
+                            class="discount-price">$500</span> $250</p>
+                    <button class="addToCart-button" class="uppercase" type="submit">add to cart</button>
+                </div>
+            </div>
+
+            <div class="products-container levis">
+                <img class="brand-logo" src="./images/levis1.png" alt="levi's logo">
+                <p class="products-container__text uppercase">up to 40% off</p>
+                <button class="addToCart-button" type="submit">Shop now</button>
+            </div>
+
+            <div class="products-container digjam">
+                <p class="products-container__text uppercase">up to 40% off</p>
+                <button class="addToCart-button" type="submit">Shop now</button>
+                <img class="brand-logo" src="./images/dig.jpg" alt="digjam logo">
+            </div>
+
+            <div id="men-collection" class="products-container">
+                <div class="product-container__text">
+                    <p class="products-container__text uppercase">spring / summer</p>
+                    <button class="addToCart-button uppercase" type="submit">shop men</button>
+                </div>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="cards-items cards-img1"></div>
+            <div class="cards-items">
+                <p class="uppercase">special offers and 50%</p>
+                <h3 class="uppercase">discount on</h3>
+                <h6 class="uppercase">mobiles</h6>
+            </div>
+            <div class="cards-items cards-img2"></div>
+            <div class="cards-items">
+                <p class="uppercase">buy 1 get 1 free on</p>
+                <h3 class="uppercase">branded</h3>
+                <h6 class="uppercase">watches</h6>
+
+            </div>
+            <div class="cards-items cards-img3"></div>
+        </div>
+
+        <nav class="main-nav">
+            <div class="main-container__nav">
+                <button href="" class="main-nav__title active">
+                    <p>Latest Design</p>
+                </button>
+                <button href="" class="main-nav__title">
+                    <p>Special Offers</p>
+                </button>
+                <button href="" class="main-nav__title">
+                    <p>Collection</p>
+                </button>
+            </div>
+        </nav>
+
+        <div class="products">
+            <div class="products-container">
+                <img src="./images/a1.png" class="products-container_img">
+                <p class="products-container__title">Air Tshirt Black</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$45.99</p>
+                    <p class="products-container__price__discount">$69.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/a8.png" class="products_img">
+                <p class="products-container__title">Next Blue Blazer</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$99.99</p>
+                    <p class="products-container__price__discount">$100.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__1">1 + 1 offer</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/a3.png" class="products_img">
+                <p class="products-container__title">Air Tshirt Black</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$119.99</p>
+                    <p class="products-container__price__discount">$120.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/a4.png" class="products_img">
+                <p class="products-container__title">Maroon Puma Tshirt</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$79.99</p>
+                    <p class="products-container__price__discount">$12.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/a5.png" class="products_img">
+                <p class="products-container__title">Multicoloured TShirt</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$129.99</p>
+                    <p class="products-container__price__discount">$150.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__combo">combo pack</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/a6.png" class="products_img">
+                <p class="products-container__title">Air Tshirt Black</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$129.99</p>
+                    <p class="products-container__price__discount">$150.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/a7.png" class="products_img">
+                <p class="products-container__title">Dresses</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$129.99</p>
+                    <p class="products-container__price__discount">$150.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/a2.png" class="products_img">
+                <p class="products-container__title">Wedding Blazers</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$129.99</p>
+                    <p class="products-container__price__discount">$150.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/g1.png" class="products_img">
+                <p class="products-container__title">Dresses</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$45.99</p>
+                    <p class="products-container__price__discount">$60.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/g2.png" class="products_img">
+                <p class="products-container__title">Shirts</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$45.99</p>
+                    <p class="products-container__price__discount">$69.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/g3.png" class="products_img">
+                <p class="products-container__title">Shirts</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$45.99</p>
+                    <p class="products-container__price__discount">$69.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+            <div class="products-container">
+                <img src="./images/mw2.png" class="products_img">
+                <p class="products-container__title">T shirts</p>
+                <div class="products-container-prices">
+                    <p class="products-container__price">$45.99</p>
+                    <p class="products-container__price__discount">$69.71</p>
+                </div>
+                <button class="addToCart-button">Add to cart</button>
+                <p class="products-container__new">new</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-img">
+            <h3 class="footer-title uppercase">buy your product in a simple way</h3>
+            <div class="footer-title__items">
+                <div class="footer-title__items-container">
+                    <span class="glyphicon glyphicon-user white" aria-hidden="true"></span>
+                    <h3 class="footer-title-section">login to your account</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat sed fuga, animi natus
+                        praesentium
+                        numquam!</p>
+                </div>
+                <div class="footer-title__items-container">
+                    <span class="glyphicon glyphicon-ok white" aria-hidden="true"></span>
+                    <h3 class="footer-title-section">login to your account</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, dolorum!</p>
+                </div>
+                <div class="footer-title__items-container">
+                    <span class="glyphicon glyphicon-credit-card white" aria-hidden="true"></span>
+                    <h3 class="footer-title-section">make payment</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, a.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-links">
+            <div class="footer-logo">
+                <img src="./images/logo3.jpg" alt="smart shop logo">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, necessitatibus a perferendis ipsa fugit
+                    et veniam incidunt maiores doloremque esse?</p>
+            </div>
+            <div class="footer-links__items">
+                <form action="#" method="get" class="footer-form">
+                    <h3 class="uppercase">sign up for newsletter !</h3>
+                    <input class="footer-form__input" type="email" name="email" placeholder="Email">
+                    <input type="submit" value="Submit" class="form-submit__button uppercase">
+                </form>
+                <div class="footer-info-container">
+                    <ul class="footer-info">
+                        <li>Information</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Men's Wear</a></li>
+                        <li><a href="#">Women's Wear</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Short Codes</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <ul class="footer-store-info">
+                        <li>Store Information</li>
+                        <li class="footer-store-info__item">
+                            <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> Address : 1234k Avenue,
+                            4th block, Newyork City
+                        </li>
+                        <li class="footer-store-info__item">
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Email : info@example.com
+                        </li>
+                        <li class="footer-store-info__item">
+                            <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Phone : +1234 567 567
+                        </li>
+                    </ul>
+                    <div class="flickr-post">
+                        <p>Flickr Posts</p>
+                        <img src="./images/b15.jpg">
+                        <img src="./images/b16.jpg">
+                        <img src="./images/b17.jpg">
+                        <img src="./images/b15.jpg">
+                        <img src="./images/b16.jpg">
+                        <img src="./images/b17.jpg">
+                        <img src="./images/b15.jpg">
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2016 Smart Shop. All rights reserved | Design by W3layouts</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function navbutton() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
 </body>
+
 </html>
